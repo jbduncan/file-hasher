@@ -27,12 +27,9 @@ public class Application {
 
 			for (Path path : paths) {
 				try (HashingInputStream stream =
-								 new HashingInputStream(function, Files.newInputStream(path, StandardOpenOption.READ))) {
+						new HashingInputStream(function, Files.newInputStream(path, StandardOpenOption.READ))) {
 
-					ByteStreams.toByteArray(stream);
-					HashCode hash = stream.hash();
-
-					System.out.println(hash + " *" + path);
+					System.out.println(hash + " *" + stream.hash());
 
 				} catch (FileNotFoundException e) {
 					System.err.println("File " + path + " could not be found. Reason: " + e.getMessage());
