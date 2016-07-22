@@ -4,7 +4,6 @@ import com.google.common.base.Optional;
 import com.google.common.hash.HashCode;
 import com.google.common.hash.HashFunction;
 import com.google.common.hash.HashingInputStream;
-import com.google.common.io.ByteStreams;
 import uk.co.bluettduncanj.parse.ArgumentsParser;
 import uk.co.bluettduncanj.utils.Pair;
 
